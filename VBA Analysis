@@ -1,0 +1,54 @@
+# **VBA Challenge Analysis**
+
+## Overview of the Project
+The world is gravitating towards green energy, and Steve's parents decided to
+invest all their money in DAQO New Energy Corp (DQ) which makes silicone solar
+wafers. The purpose of this project is to help Steve diversify his portfolio by
+analyzing different green energy stock data in 2017 and 2018. This was done by
+refactoring the starter code.
+
+## Results
+- ![Image of VBA_Challenge_2017]
+(https://github.com/kushalishah/stock-analysis/blob/main/VBA_Challenge_2017.png)
+
+- The image above shows us all the refactored green energy stocks in 2017. From
+the data, we can see that 2017 was a great year for green energy companies except
+for TERP as they had a negative return. Even though their total daily volume was
+the lowest, Steve's parents were on the right track for investing in DQ as they
+had they had a 199.4% return rate. The color coding was done using the following
+code:
+`For i = dataRowStart To dataRowEnd
+        If Cells(i, 3) > 0 Then
+            Cells(i, 3).Interior.Color = vbGreen
+        Else
+            Cells(i, 3).Interior.Color = vbRed
+        End If`
+The code explains that if the returns are greater than zero, then the cells will
+populate green, if not then they will populate red.
+
+- ![Image of VBA_Challenge_2018]
+(https://github.com/kushalishah/stock-analysis/blob/main/VBA_Challenge_2018.png)
+
+- The image above shows us all the refactored green energy stocks in 2018. From
+the data, we can see that 2018 was not a great year for green energy companies
+except for ENPH and RUN as they had a positive returns. DQ had the second lowest
+total daily volume, yet they had the highest negative returns. Steve's parents
+would lose their money if they heavily invested in green energy stocks in 2018.
+In conclusion, I wanted to help Steve to be able to input the year he wants to
+run the analysis for. To do that, I entered the value by assigning InputBox to a
+variable followed by <What year would you like to run the analysis on?>. Here is
+what the code looks like:
+`yearValue = InputBox("What year would you like to run the analysis on?")`
+
+## Summary
+- Refactoring has several advantages and disadvantages. The main reason why we
+refactored code for Steve was because we wanted to make sure the code was easy
+for him to understand, useful to identify bugs and also help with faster
+programming. However, refactoring code can take up a lot of time, especially if
+you're on a budget.
+- Using VBA Script can be useful for automating certain tasks by running macros,
+it also allows us to write complicated scripts to perform complex analyses,
+which we wouldn't be able to do with Excel alone, and we can learn the
+fundamental building blocks of programming languages. However, VBA can be
+dangerous as the macros can be hacked and destroy all your code, there is a
+possibility that all time goes into debugging a specific code.
